@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PC Matic Support | Help & Troubleshooting</title>
+
+  <meta name="description"
+    content="Get helpful PC Matic support information for installation, login, scanning, account problems, troubleshooting, and common technical issues.">
+
+  <meta name="keywords"
+    content="PC Matic Support, PC Matic Help, PC Matic Troubleshooting, PC Matic Login, PC Matic Installation">
+
+  <meta name="author" content="PC Matic Support Information">
+
+  <style>
+    :root {
+      --primary: #5b5cf0;
+      --primary-light: #7c7ff7;
+      --secondary: #00c6ff;
+      --dark: #080b18;
+      --dark-2: #0d1226;
+      --card: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.12);
+      --text: #f7f8ff;
+      --muted: #a9b0c7;
+      --success: #35d07f;
+      --warning: #ffca57;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(91,92,240,.18), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(0,198,255,.12), transparent 28%),
+        var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(8,11,24,.78);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .navbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 20px;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+      );
+      box-shadow: 0 8px 25px rgba(91,92,240,.35);
+    }
+
+    .logo span {
+      color: #fff;
+    }
+
+    .logo small {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: -4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #cdd2e4;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .nav-button {
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        #7375ff
+      );
+      color: white;
+      box-shadow: 0 8px 25px rgba(91,92,240,.25);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+      padding: 115px 0 100px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(91,92,240,.16);
+      filter: blur(100px);
+      border-radius: 50%;
+      left: -250px;
+      top: 50px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: rgba(0,198,255,.10);
+      filter: blur(100px);
+      border-radius: 50%;
+      right: -220px;
+      top: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 15px;
+      border-radius: 50px;
+      border: 1px solid rgba(124,127,247,.35);
+      background: rgba(91,92,240,.10);
+      color: #b9bbff;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--success);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #fff,
+        #9ca1ff,
+        #6ee7ff
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        #7779ff
+      );
+      color: white;
+      box-shadow: 0 12px 35px rgba(91,92,240,.30);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(91,92,240,.40);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.10);
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.025);
+    }
+
+    .trust-grid {
+      min-height: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       DISCLAIMER
+    ========================= */
+
+    .notice {
+      margin: 45px auto 0;
+      padding: 20px 22px;
+      max-width: 900px;
+      border: 1px solid rgba(255,202,87,.22);
+      background: rgba(255,202,87,.06);
+      border-radius: 14px;
+      color: #d8dbe7;
+      font-size: 13px;
+    }
+
+    .notice strong {
+      color: var(--warning);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 55px;
+    }
+
+    .section-heading .eyebrow {
+      color: #8588ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================
+       ISSUE CARDS
+    ========================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.025)
+      );
+      backdrop-filter: blur(15px);
+      transition: .3s;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(91,92,240,.14);
+      border-radius: 50%;
+      filter: blur(35px);
+      top: -70px;
+      right: -70px;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(124,127,247,.35);
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 22px;
+      font-size: 23px;
+      background: linear-gradient(
+        135deg,
+        rgba(91,92,240,.22),
+        rgba(0,198,255,.10)
+      );
+      border: 1px solid rgba(124,127,247,.20);
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       HELP STEPS
+    ========================= */
+
+    .steps-section {
+      background: rgba(255,255,255,.025);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      position: relative;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 42px;
+      left: 70%;
+      width: 60%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(91,92,240,.7),
+        transparent
+      );
+    }
+
+    .step-number {
+      position: relative;
+      z-index: 2;
+      width: 55px;
+      height: 55px;
+      margin: auto auto 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+      );
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 10px 30px rgba(91,92,240,.25);
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      margin-bottom: 14px;
+      padding: 20px 23px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.045);
+      transition: .25s;
+    }
+
+    details[open] {
+      background: rgba(91,92,240,.07);
+      border-color: rgba(124,127,247,.3);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 750;
+      padding-right: 25px;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      color: #8d91ff;
+      font-size: 20px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 35px;
+      border-radius: 25px;
+      border: 1px solid rgba(124,127,247,.25);
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(91,92,240,.25),
+          transparent 55%
+        ),
+        rgba(255,255,255,.04);
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: auto auto 28px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 50px 0 25px;
+      border-top: 1px solid var(--border);
+      background: #060813;
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      max-width: 700px;
+      margin: 8px auto;
+      color: #7f879f;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #aab1c5;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      padding-top: 22px;
+      margin-top: 20px;
+      border-top: 1px solid var(--border);
+      color: #697189;
+      font-size: 12px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .step:not(:last-child)::after {
+        display: none;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        background: rgba(8,11,24,.97);
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 0;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .navbar {
+        height: 68px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .logo-icon {
+        width: 37px;
+        height: 37px;
+      }
+
+      .hero {
+        padding: 80px 0 70px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        padding: 25px 0;
+        gap: 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .cta {
+        padding: 70px 14px;
+      }
+
+      .cta-box {
+        padding: 50px 20px;
+      }
+
+      .notice {
+        margin-top: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+        <div class="logo-icon">✓</div>
+        <div>
+          PC Matic <span>Support</span>
+          <small>Independent Help & Information</small>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        
+        <a href="#faq">FAQ</a>
+        <a href="https://arsresolution.com/" class="nav-button">Official Support</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="container hero-content">
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Support Information & Troubleshooting
+      </div>
+
+      <h1>
+        Get Help With
+        <span class="gradient-text">PC Matic</span>
+      </h1>
+
+      <p>
+        Find clear and helpful information for common PC Matic
+        installation, login, scanning, account, and troubleshooting issues.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="https://arsresolution.com/" class="btn btn-primary">
+          Explore Common Issues →
+        </a>
+
+        <a href="#faq" class="btn btn-secondary">
+          View FAQs
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+
+    <div class="container trust-grid">
+
+      <div class="trust-item">
+        <strong>Installation</strong>
+        <span>General troubleshooting guidance</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Account Help</strong>
+        <span>Login and password information</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Technical Issues</strong>
+        <span>Common problems and solutions</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NOTICE -->
+  <div class="container">
+
+    <div class="notice">
+      <strong>Important:</strong>
+      This is an independent informational website. It is not affiliated
+      with, sponsored by, or officially connected with PC Matic.
+      For account-specific assistance, always use official PC Matic support resources.
+    </div>
+
+  </div>
+
+
+  <!-- COMMON ISSUES -->
+  <section class="section" id="issues">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Troubleshooting
+        </div>
+
+        <h2>
+          Common PC Matic Issues
+        </h2>
+
+        <p>
+          Explore general information about problems that users
+          may encounter while using PC Matic.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <article class="card">
+
+          <div class="card-icon">⚙️</div>
+
+          <h3>Installation Problems</h3>
+
+          <p>
+            Learn about common installation difficulties and basic
+            troubleshooting steps when the software does not install correctly.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-icon">🔐</div>
+
+          <h3>Login Issues</h3>
+
+          <p>
+            Find general guidance for account access, forgotten
+            passwords, and common sign-in problems.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-icon">🛡️</div>
+
+          <h3>Scan Problems</h3>
+
+          <p>
+            Get helpful information when a PC Matic scan stops,
+            fails, or does not complete normally.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-icon">💻</div>
+
+          <h3>Software Errors</h3>
+
+          <p>
+            Learn what information to collect when PC Matic
+            displays an error or behaves unexpectedly.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-icon">👤</div>
+
+          <h3>Account Support</h3>
+
+          <p>
+            Find general information about account access,
+            subscriptions, and password recovery.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-icon">🔎</div>
+
+          <h3>General Troubleshooting</h3>
+
+          <p>
+            Follow basic troubleshooting practices before
+            requesting additional technical assistance.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="section steps-section" id="steps">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Simple Process
+        </div>
+
+        <h2>
+          How to Get Help
+        </h2>
+
+        <p>
+          Follow these simple steps when you encounter
+          a PC Matic problem.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <h3>Identify</h3>
+
+          <p>
+            Determine what feature or function is causing the problem.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <h3>Check</h3>
+
+          <p>
+            Look for error messages and review available troubleshooting information.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <h3>Troubleshoot</h3>
+
+          <p>
+            Try basic troubleshooting steps and check the official knowledge base.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">4</div>
+
+          <h3>Contact</h3>
+
+          <p>
+            Use the appropriate official PC Matic support channel if needed.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          FAQ
+        </div>
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+        <p>
+          Quick answers to common questions about getting PC Matic help.
+        </p>
+
+      </div>
+
+
+      <div class="faq">
+
+        <details>
+
+          <summary>
+            Is this the official PC Matic website?
+          </summary>
+
+          <p>
+            No. This is an independent informational website and is not
+            affiliated with or officially connected to PC Matic.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Where can I get official PC Matic support?
+          </summary>
+
+          <p>
+            Use the official PC Matic website and its current Support
+            section to find the appropriate support options for your
+            product and subscription.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            What should I provide when requesting support?
+          </summary>
+
+          <p>
+            Provide a clear description of the issue, your operating
+            system, relevant error messages, and the troubleshooting
+            steps you have already tried. Never share your password.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            What if PC Matic will not install?
+          </summary>
+
+          <p>
+            Check the official installation requirements, verify that
+            you are using the appropriate installer, restart your device,
+            and review official troubleshooting information.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            What if I cannot log into my account?
+          </summary>
+
+          <p>
+            Verify that you are using the correct account email and
+            use the official password-reset process if necessary.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta" id="official">
+
+    <div class="cta-box">
+
+      <div class="badge">
+        Official Resources
+      </div>
+
+      <h2>
+        Need Official Assistance?
+      </h2>
+
+      <p>
+        For account-specific questions, billing matters, product issues,
+        or technical support, use the current official PC Matic support
+        resources.
+      </p>
+
+      <!-- Replace # with the verified official PC Matic Support URL -->     
+      <a href="https://arsresolution.com/" class="btn btn-primary">
+        Visit Official Support →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="footer-logo">
+        PC Matic Support
+      </div>
+
+      <p>
+        Independent support information and troubleshooting resources.
+      </p>
+
+      <p>
+        PC Matic is a trademark of its respective owner.
+        This website is not affiliated with, sponsored by, or endorsed by PC Matic.
+      </p>
+
+      <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#issues">Issues</a>
+        <a href="#steps">How It Works</a>
+        <a href="#faq">FAQ</a>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 PC Matic Support Information. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
